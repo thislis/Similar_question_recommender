@@ -2,7 +2,6 @@ from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
 from pydantic import BaseModel
-from datetime import datetime
 
 from database import SessionLocal, engine
 import models
@@ -44,4 +43,4 @@ class Question_Controller:
             self.db.add(question)
         self.db.commit()
 
-    def get_question(self):
+#    def get_question(self):
