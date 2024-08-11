@@ -1,9 +1,11 @@
-from fastapi import HTTPException
-from sqlalchemy.orm import Session
 from typing import List
+
+from fastapi import HTTPException
 from pydantic import BaseModel
+from sqlalchemy.orm import Session
 
 from src.database import models
+
 
 class Q_req(BaseModel):
     q_type: str
