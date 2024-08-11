@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String
-from database import Base
+from src.database.database import Base
 
 class Menu(Base):
     __tablename__ = "question"

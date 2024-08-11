@@ -6,3 +6,4 @@ engine = create_engine("sqlite:///./Similar_question_recommender.db", connect_ar
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
+
