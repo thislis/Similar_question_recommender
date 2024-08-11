@@ -20,7 +20,7 @@ def get_db():
 
 @app.get('/')
 def hello():
-    return json.dumps({'message':'살려줘요'})
+    return json.dumps({'message':'살려주세요, 분류 부분은 나중에 본가 가면 모델 학습 여러가지 돌려보고 만들게요'})
 
 @app.post('/api/set/question')
 def set_Q(request: C.Q_req, db: Session = Depends(get_db)):
