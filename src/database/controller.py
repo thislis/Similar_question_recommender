@@ -9,9 +9,6 @@ def add_question(db: Session, question: Question, commit: bool = True):
         db.commit()
     return question
 
-def get_question(db: Session, question_type: str):
-    questions = db.query(Question).filter(Question.q_type == question_type).all()
-    # if len(questions) == 0:
-    #     raise HTTPException(status_code=404, detail="이건 없는데;;")
-    # questions = [q for q in question] # ????
+def get_questions(db: Session, question_type: str):
+    questions = db.query(Question).filter(Question.question_type == question_type).all()
     return questions
